@@ -25,11 +25,7 @@ public class RateController extends AbstractController<Rate, RateService> {
     //endregion
 
 
-    public List<Rate> getAll(City  cityOrigin,City cityDestination) {
 
-            return this.service.getAll(cityOrigin,cityDestination);
-
-    }
 
 
 

@@ -3,7 +3,7 @@ package edu.utn.phones.Controller.Web;
 import edu.utn.phones.Iterfaces.IAbstractWebCrud;
 import edu.utn.phones.Configuration.Configuration;
 import edu.utn.phones.Controller.Model.CallController;
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 import edu.utn.phones.Model.Call;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -71,7 +71,7 @@ public class CallWebController implements IAbstractWebCrud<Call> {
 
 
     @GetMapping("/")
-    public ResponseEntity<List<Call>> getAll(@RequestParam(required = false) String nameCall){
+    public ResponseEntity<List<Call>> getAll(){
         List<Call> list = this.callController.getAll();
         return ResponseEntity.ok().body(list);
     }

@@ -13,7 +13,7 @@ public interface IProvinceRepository extends JpaRepository<Province, Integer> {
 
 
 
-    <String>List<Province> findByNameProvince(String filter);
+
 
 
 }

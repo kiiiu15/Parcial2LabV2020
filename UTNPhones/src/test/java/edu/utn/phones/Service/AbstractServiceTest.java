@@ -1,6 +1,6 @@
 package edu.utn.phones.Service;
 
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 import edu.utn.phones.Model.Province;
 import org.junit.Before;
 import org.junit.Test;

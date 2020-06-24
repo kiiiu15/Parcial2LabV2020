@@ -1,10 +1,9 @@
 package edu.utn.phones.Service;
 
 import edu.utn.phones.Iterfaces.IAbstractCrud;
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public  class AbstractService<T, R extends JpaRepository<T,Integer>> implements IAbstractCrud<T>  {

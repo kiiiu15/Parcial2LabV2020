@@ -4,7 +4,7 @@ import edu.utn.phones.Iterfaces.IAbstractWebCrud;
 import edu.utn.phones.Configuration.Configuration;
 import edu.utn.phones.Controller.Model.CityController;
 import edu.utn.phones.Controller.Model.RateController;
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 import edu.utn.phones.Model.Rate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -71,7 +71,7 @@ public class RateWebController implements IAbstractWebCrud<Rate> {
 
 
     @GetMapping("/")
-    public ResponseEntity<List<Rate>> getAll(@RequestParam(required = false) Integer idCityOrigin, @RequestParam(required = false)Integer idCityDestination) throws ResourceNotFoundException {
+    public ResponseEntity<List<Rate>> getAll() {
 
         List<Rate> list = this.rateController.getAll();
 

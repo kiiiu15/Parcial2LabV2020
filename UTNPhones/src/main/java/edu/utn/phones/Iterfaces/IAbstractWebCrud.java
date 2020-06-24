@@ -1,6 +1,6 @@
 package edu.utn.phones.Iterfaces;
 
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 import org.springframework.http.ResponseEntity;
 
 public interface IAbstractWebCrud<T> {

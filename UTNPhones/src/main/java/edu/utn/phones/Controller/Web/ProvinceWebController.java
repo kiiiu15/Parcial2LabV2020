@@ -3,8 +3,8 @@ package edu.utn.phones.Controller.Web;
 import edu.utn.phones.Iterfaces.IAbstractWebCrud;
 import edu.utn.phones.Configuration.Configuration;
 import edu.utn.phones.Controller.Model.ProvinceController;
-import edu.utn.phones.Exceptions.GeneralExceptions.NoContentToShowException;
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
+import edu.utn.phones.Exceptions.NoContentToShowException;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 import edu.utn.phones.Model.Province;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -57,7 +57,7 @@ public class ProvinceWebController implements IAbstractWebCrud<Province> {
 
     //region GET
     @GetMapping("/")
-    public ResponseEntity<List<Province>> getAll(@RequestParam(required = false) String nameProvince) throws NoContentToShowException {
+    public ResponseEntity<List<Province>> getAll() throws NoContentToShowException {
 
         List<Province> provinces = this.provinceController.getAll();
 

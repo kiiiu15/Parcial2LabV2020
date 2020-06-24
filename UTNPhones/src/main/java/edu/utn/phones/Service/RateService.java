@@ -20,11 +20,6 @@ public class RateService extends AbstractService<Rate, IRateRepository> {
     //endregion
 
 
-    public List<Rate> getAll(City cityOrigin, City cityDestination){
-
-        return this.repository.findAll();
-
-    }
 
 
 

@@ -4,7 +4,7 @@ package edu.utn.phones.Controller.Web;
 import edu.utn.phones.Iterfaces.IAbstractWebCrud;
 import edu.utn.phones.Configuration.Configuration;
 import edu.utn.phones.Controller.Model.BillController;
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 import edu.utn.phones.Model.Bill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -31,8 +31,7 @@ public class BillWebController implements IAbstractWebCrud<Bill> {
     @PostMapping("/")
     public ResponseEntity add(@RequestBody Bill newBill){
 
-        /*traer el usuario logeado*/
-        /**/
+
 
         Bill ut = this.billController.add(newBill);
 
@@ -73,7 +72,7 @@ public class BillWebController implements IAbstractWebCrud<Bill> {
 
 
     @GetMapping("/")
-    public ResponseEntity<List<Bill>> getAll(@RequestParam(required = false) String nameBill){
+    public ResponseEntity<List<Bill>> getAll(){
         List<Bill> list = this.billController.getAll();
         return ResponseEntity.ok().body(list);
     }

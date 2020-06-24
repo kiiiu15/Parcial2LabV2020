@@ -8,8 +8,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @org.springframework.context.annotation.Configuration
-@EnableScheduling
-@EnableCaching
 public class Configuration {
 
 

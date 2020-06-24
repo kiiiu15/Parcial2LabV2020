@@ -1,4 +1,4 @@
-package edu.utn.phones.Exceptions.GeneralExceptions;
+package edu.utn.phones.Exceptions;
 
 import lombok.NoArgsConstructor;
 

@@ -16,9 +16,7 @@ public class UserController extends AbstractController<User, UserService> {
         super(userService);
     }
 
-    public User login(String username, String password) {
-        return this.service.login(username,password);
-    }
+
     //endregion
 
 

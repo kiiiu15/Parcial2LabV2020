@@ -1,9 +1,7 @@
 package edu.utn.phones.Controller.Model;
 
 import edu.utn.phones.Iterfaces.IAbstractCrud;
-import edu.utn.phones.Exceptions.GeneralExceptions.ResourceNotFoundException;
-import edu.utn.phones.Service.AbstractService;
-import org.springframework.data.jpa.repository.JpaRepository;
+import edu.utn.phones.Exceptions.ResourceNotFoundException;
 
 
 import java.util.List;
