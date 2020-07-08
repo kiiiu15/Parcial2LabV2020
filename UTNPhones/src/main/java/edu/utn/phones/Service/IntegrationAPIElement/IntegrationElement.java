@@ -1,7 +1,6 @@
 package edu.utn.phones.Service.IntegrationAPIElement;
 
 
-
 import edu.utn.phones.Exceptions.BadGateWayException;
 import edu.utn.phones.Exceptions.noContentException;
 import edu.utn.phones.Model.Call;
@@ -27,7 +26,8 @@ public class IntegrationElement {
 
 
     public ResponseEntity callFiltered() throws noContentException {
-        ResponseEntity entity = rest.getForEntity(url, ResponseEntity.class);
+        ResponseEntity<Call[]> entity = rest.getForEntity(url, Call[].class);
+        System.out.println(entity);
         if (entity.getStatusCodeValue() == 204){
              throw new noContentException();
         }
